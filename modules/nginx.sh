@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # NGINX
-aptitude install -y nginx
+apt-get install -y nginx
 
 # Create default website
 mkdir -p /mnt/websites/DEFAULT_WEBSITE/errors

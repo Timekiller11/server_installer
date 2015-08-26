@@ -1,11 +1,11 @@
 #!/bin/bash
 # PHP
-aptitude install -y php5-fpm
-aptitude install -y php5-cli
-aptitude install -y php5-mysql
-aptitude install -y php5-curl
-aptitude install -y php5-gd
-aptitude install -y php5-mcrypt
+apt-get install -y php5-fpm
+apt-get install -y php5-cli
+apt-get install -y php5-mysql
+apt-get install -y php5-curl
+apt-get install -y php5-gd
+apt-get install -y php5-mcrypt
 
 # Install mcrypt (Needed for Ubuntu)
 php5enmod mcrypt

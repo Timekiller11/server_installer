@@ -1,2 +1,2 @@
 #!/bin/bash
-aptitude install -y nmap
+apt-get install -y nmap

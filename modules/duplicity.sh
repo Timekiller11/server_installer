@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo aptitude install duplicity gzip python python-paramiko
+apt-get install duplicity gzip python python-paramiko
 
 
 

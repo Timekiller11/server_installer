@@ -1,3 +1,3 @@
 #!/bin/bash
-aptitude install -y tiger
+apt-get install -y tiger
 tiger

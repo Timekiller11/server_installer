@@ -1,6 +1,6 @@
 #!/bin/bash
 # Dependencies
-sudo aptitude install iwatch -y
+apt-get install iwatch -y
 
 
 

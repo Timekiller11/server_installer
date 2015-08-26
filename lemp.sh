@@ -62,8 +62,8 @@ echo "logwatch"
 . modules/logwatch.sh >/dev/null 2>&1
 echo "rkhunter"
 . modules/rkhunter.sh >/dev/null 2>&1
-echo "tiger"
-. modules/tiger.sh >/dev/null 2>&1
+#echo "tiger"
+#. modules/tiger.sh >/dev/null 2>&1
 
 echo "Installing Firewall"
 echo "UFW"

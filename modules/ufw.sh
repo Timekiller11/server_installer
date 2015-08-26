@@ -1,6 +1,10 @@
 #!/bin/bash
 # Dependencies
-aptitude install -y ufw
+apt-get install -y ufw
+
+ufw default deny incoming
+ufw default deny outgoing
+
 # SSH
 ufw allow 22/tcp
 
@@ -15,5 +19,6 @@ ufw allow 22/tcp
 # SMTPS
 #ufw allow 465/tcp
 
+ufw disable
 ufw enable
 

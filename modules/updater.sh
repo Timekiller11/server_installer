@@ -1,6 +1,6 @@
 #!/bin/bash
 # Install dependencies if needed.
-aptitude install aptitude -y
+apt-get install aptitude -y
 
 mkdir -p /var/log/cronjobs/updates
 

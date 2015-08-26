@@ -1,2 +1,2 @@
 #!/bin/bash
-aptitude install -y git
+apt-get install -y git

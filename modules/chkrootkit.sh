@@ -1,3 +1,3 @@
 #!/bin/bash
-aptitude install -y chkrootkit
+apt-get install -y chkrootkit
 chkrootkit

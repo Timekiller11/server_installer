@@ -1,3 +1,3 @@
 #!/bin/bash
-aptitude install -y logwatch
+apt-get install -y logwatch
 logwatch

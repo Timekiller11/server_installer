@@ -2,7 +2,7 @@
 # PSAD
 echo "postfix postfix/main_mailer_type select Internet Site" | sudo debconf-set-selections
 echo "postfix postfix/mailname string `$HOSTNAME`" | sudo debconf-set-selections
-aptitude install -y psad
+apt-get install -y psad
 
 # Change de default action line
 cat /etc/psad/psad.conf | sed -e "s/\s*HOSTNAME.*/HOSTNAME $HOSTNAME;/" > /etc/psad/psad.conf.new1
