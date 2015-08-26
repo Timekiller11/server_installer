@@ -15,11 +15,11 @@ mkdir -p /var/www
 
 echo "Dependencies"
 echo "build-essential"
-aptitude install -y build-essential >/dev/null 2>&1
+apt-get install -y build-essential >/dev/null 2>&1
 echo "python-software-properties"
-aptitude install -y python-software-properties >/dev/null 2>&1
+apt-get install -y python-software-properties >/dev/null 2>&1
 echo "libdate-manip-perl"
-aptitude install -y libdate-manip-perl >/dev/null 2>&1
+apt-get install -y libdate-manip-perl >/dev/null 2>&1
 
 echo "Securing the server"
 echo "hots"
@@ -64,6 +64,10 @@ echo "rkhunter"
 . modules/rkhunter.sh >/dev/null 2>&1
 #echo "tiger"
 #. modules/tiger.sh >/dev/null 2>&1
+
+echo "Setting up cronjobs"
+echo "Updates"
+. modules/updater.sh
 
 echo "Installing Firewall"
 echo "UFW"
