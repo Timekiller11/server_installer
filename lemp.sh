@@ -54,6 +54,8 @@ echo "chkrootkit"
 . modules/chkrootkit.sh >/dev/null 2>&1
 echo "fail2ban"
 . modules/fail2ban.sh >/dev/null 2>&1
+echo "psad"
+. modules/psad.sh >/dev/null 2>&1
 #echo ""
 #. modules/iwatch.sh >/dev/null 2>&1
 echo "logwatch"
@@ -66,8 +68,6 @@ echo "tiger"
 echo "Installing Firewall"
 echo "UFW"
 . modules/ufw.sh >/dev/null 2>&1
-echo "psad"
-. modules/psad.sh >/dev/null 2>&1
 
 
 
