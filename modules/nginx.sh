@@ -4,17 +4,17 @@
 apt-get install -y nginx
 
 # Create default website
-mkdir -p /mnt/websites/DEFAULT_WEBSITE/errors
-mkdir -p /mnt/websites/DEFAULT_WEBSITE/logs
-mkdir -p /mnt/websites/DEFAULT_WEBSITE/html
-cat > /mnt/websites/DEFAULT_WEBSITE/html/index.php << "EOF"
+mkdir -p /var/www/DEFAULT_WEBSITE/errors
+mkdir -p /var/www/DEFAULT_WEBSITE/logs
+mkdir -p /var/www/DEFAULT_WEBSITE/html
+cat > /var/www/DEFAULT_WEBSITE/html/index.php << "EOF"
 <?php
     phpinfo();
 ?>
 EOF
-chown -R www-data:www-data /mnt/websites/DEFAULT_WEBSITE
-chmod 755 $(find /mnt/websites/DEFAULT_WEBSITE -type d)
-chmod 644 $(find /mnt/websites/DEFAULT_WEBSITE -type f)
+chown -R www-data:www-data /var/www/DEFAULT_WEBSITE
+chmod 755 $(find /var/www/DEFAULT_WEBSITE -type d)
+chmod 644 $(find /var/www/DEFAULT_WEBSITE -type f)
 
 cat > /etc/nginx/sites-available/default << "EOF"
 # Redirect to non-www
@@ -29,14 +29,14 @@ server {
     #listen   [::]:80 default ipv6only=on; ## listen for ipv6
 
     # Document root
-    root /mnt/websites/DEFAULT_WEBSITE/html/public/;
+    root /var/www/DEFAULT_WEBSITE/html/public/;
  
     # Try php first, then  static files
     index index.php index.html index.htm;
  
     # Specific logs for this vhost
-    access_log /mnt/websites/DEFAULT_WEBSITE/logs/access.log;
-    error_log  /mnt/websites/DEFAULT_WEBSITE/logs/error.log error;
+    access_log /var/www/DEFAULT_WEBSITE/logs/access.log;
+    error_log  /var/www/DEFAULT_WEBSITE/logs/error.log error;
  
     # Make site accessible from http://localhost/
     server_name DEFAULT_WEBSITE;
@@ -61,7 +61,7 @@ server {
 	error_page 500 502 503 504 /50x.html;
 	
 	location = /50x.html {
-		root /mnt/websites/DEFAULT_WEBSITE/errors;
+		root /var/www/DEFAULT_WEBSITE/errors;
 	}
 
     # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
