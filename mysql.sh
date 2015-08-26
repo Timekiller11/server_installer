@@ -36,6 +36,8 @@ echo "git"
 . modules/git.sh >/dev/null 2>&1
 echo "curl"
 . modules/curl.sh >/dev/null 2>&1
+echo "psad"
+. modules/psad.sh >/dev/null 2>&1
 echo "mariadb"
 . modules/mariadb.sh >/dev/null 2>&1
 

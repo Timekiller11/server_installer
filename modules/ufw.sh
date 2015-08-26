@@ -19,6 +19,6 @@ ufw allow 25/tcp
 # SMTPS
 ufw allow 465/tcp
 
-ufw disable
-ufw enable
+ufw disable --force
+ufw enable --force
 
