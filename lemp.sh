@@ -11,46 +11,48 @@ HOSTNAME="cserver.me"
 mkdir -p /root/cronjobs
 
 
-# Dependencies and desired softwares
-aptitude install -y build-essential
-aptitude install -y python-software-properties
-aptitude install -y libdate-manip-perl
+echo "Dependencies and desired softwares"
+
+aptitude install -y build-essential &> /dev/null
+aptitude install -y python-software-properties &> /dev/null
+aptitude install -y libdate-manip-perl &> /dev/null
 
 
-. modules/composer.sh
-. modules/nmap.sh
-. modules/git.sh
-. modules/curl.sh
+
+. modules/composer.sh &> /dev/null
+. modules/nmap.sh &> /dev/null
+. modules/git.sh &> /dev/null
+. modules/curl.sh &> /dev/null
 
 
 # Create website directory
 mkdir -p /var/www
 
 
-. modules/mariadb.sh
-. modules/nginx.sh
-. modules/php.sh
+. modules/mariadb.sh &> /dev/null
+. modules/nginx.sh &> /dev/null
+. modules/php.sh &> /dev/null
 
 
 
 # Securing the server
-. modules/secure_host.sh
-. modules/secure_shared.sh
-. modules/secure_sysctl.sh
+. modules/secure_host.sh &> /dev/null
+. modules/secure_shared.sh &> /dev/null
+. modules/secure_sysctl.sh &> /dev/null
 
 # Installing security appliances
-. modules/apparmor.sh
-. modules/chkrootkit.sh
-. modules/fail2ban.sh
-. modules/iwatch.sh
-. modules/logwatch.sh
-. modules/rkhunter.sh
-. modules/tiger.sh
+. modules/apparmor.sh &> /dev/null
+. modules/chkrootkit.sh &> /dev/null
+. modules/fail2ban.sh &> /dev/null
+. modules/iwatch.sh &> /dev/null
+. modules/logwatch.sh &> /dev/null
+. modules/rkhunter.sh &> /dev/null
+. modules/tiger.sh &> /dev/null
 
 # Installing Firewall
-. modules/ufw.sh
+. modules/ufw.sh &> /dev/null
 
-. modules/psad.sh
+. modules/psad.sh &> /dev/null
 
 
 
