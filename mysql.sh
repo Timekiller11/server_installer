@@ -4,7 +4,6 @@ if [ $(id -u) != "0" ]; then
     exit
 fi
 # Variables.
-HOSTNAME="cserver.me"
 
 echo "Create directories"
 echo "cron job"
@@ -37,15 +36,8 @@ echo "git"
 . modules/git.sh >/dev/null 2>&1
 echo "curl"
 . modules/curl.sh >/dev/null 2>&1
-echo "php"
-. modules/php.sh >/dev/null 2>&1
 echo "mariadb"
 . modules/mariadb.sh >/dev/null 2>&1
-echo "nginx"
-. modules/nginx.sh >/dev/null 2>&1
-echo "composer"
-. modules/composer.sh >/dev/null 2>&1
-
 
 echo "Installing security appliances"
 echo "apparmor"
@@ -54,8 +46,6 @@ echo "chkrootkit"
 . modules/chkrootkit.sh >/dev/null 2>&1
 echo "fail2ban"
 . modules/fail2ban.sh >/dev/null 2>&1
-echo "psad"
-. modules/psad.sh >/dev/null 2>&1
 #echo ""
 #. modules/iwatch.sh >/dev/null 2>&1
 echo "logwatch"
