@@ -1,10 +1,9 @@
 # server_installer
 
-########################################### WARNING ###########################################
+WARNING
 
 This is a beta version and shouldn't be used on a production server in any case.
 
-########################################### WARNING ###########################################
 
 Todo : 
 
